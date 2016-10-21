@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/onsenui.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/onsen-css-components.css"/>
+        <link rel="stylesheet" type="text/css" href="css/qcard.css" />
+       
+        <link rel="stylesheet" type="text/css" href="css/materialize.min.css" />
+       
+        <title>Qcard - Managing Chaotic Lives </title>
+    </head>
+    <body>
+        <ons-splitter>
+          <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+            <ons-page>
+              <ons-list>
+                <ons-list-item>
+                  <img style="padding-left: 45px;" src="img/logo.png">
+                </ons-list-item>
+                <ons-list-item onclick="fn.load('home.html')" tappable>
+                  Home
+                </ons-list-item>
+                <ons-list-item onclick="fn.load('settings.html')" tappable>
+                  Settings
+                </ons-list-item>
+                <ons-list-item onclick="fn.load('about.html')" tappable>
+                  <i class="fa fa-user"></i>About
+                </ons-list-item>
+                <ons-list-item id="logout-btn" tappable>
+                  Log Out
+                </ons-list-item>
+              </ons-list>
+            </ons-page>
+          </ons-splitter-side>
+          <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+        </ons-splitter>
+
+        <ons-template id="home.html">
+          <ons-page>
+            <ons-toolbar>
+              <div class="left">
+                <ons-toolbar-button onclick="fn.open()">
+                  <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+              </div>
+              <div class="center">
+                Qcard
+              </div>
+            </ons-toolbar>
+            <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
+              <div class="fixed-action-btn vertcal" style="bottom: 45px; right: 24px;">
+                <a class="btn-floating btn-large red">
+                   <i class="zmdi zmdi-plus"></i>  
+                </a>
+                <ul>
+                  <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+                  <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+                  <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+                  <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+                </ul>
+              </div>
+
+                <p>This home page!.</p>
+             
+            </p>
+          </ons-page>
+        </ons-template>
+
+        <ons-template id="settings.html">
+          <ons-page>
+            <ons-toolbar>
+              <div class="left">
+                <ons-toolbar-button onclick="fn.open()">
+                  <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+              </div>
+              <div class="center">
+                Settings
+              </div>
+            </ons-toolbar>
+          </ons-page>
+        </ons-template>
+
+        <ons-template id="about.html">
+          <ons-page>
+            <ons-toolbar>
+              <div class="left">
+                <ons-toolbar-button onclick="fn.open()">
+                  <ons-icon icon="md-menu"></ons-icon>
+                </ons-toolbar-button>
+              </div>
+              <div class="center">
+                About
+              </div>
+            </ons-toolbar>
+            <p style="text-align: center; padding-top: 20px;">
+              TEST
+            </p>
+          </ons-page>
+        </ons-template>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/onsenui.js"></script>
+        <script type="text/javascript" src="js/qcard-dashboard-onsenui.js"></script>
+        <script type="text/javascript" src="js/jQuery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>

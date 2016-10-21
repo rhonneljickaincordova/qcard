@@ -1,0 +1,38 @@
+.btn{
+	width: 50%;
+	padding: 4px 12px;
+}
+
+.btn-large{
+	line-height: 36px;
+	text-align: center;
+}
+
+.cs-text{
+	text-align: center;
+    font-size: 30px;
+    margin-top: 485px;
+    color: #fff;
+    float: left;
+}
+
+.cs-img{
+	height: 100%; 
+	margin: auto;
+	width: 100%;
+}
+
+.input-lg{
+	width: 100%;
+}
+
+.text-input--material__label {
+    color: #afafaf;
+    position: absolute;
+    left: 15px;
+    top: 2px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    pointer-events: none;
+}

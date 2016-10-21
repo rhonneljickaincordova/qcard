@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/onsenui.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/onsen-css-components.css"/>
+        <link rel="stylesheet" type="text/css" href="css/qcard.css" />
+        <title>Qcard - Managing Chaotic Lives </title>
+    </head>
+    <body>
+        <ons-navigator id="myNavigator" page="index.html"></ons-navigator>
+
+        <ons-template id="index.html">
+          <ons-page id="index">
+            <div id="qcard-ads" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#qcard-ads" data-slide-to="0" class="active"></li>
+                <li data-target="#qcard-ads" data-slide-to="1"></li>
+                <li data-target="#qcard-ads" data-slide-to="2"></li>
+                <li data-target="#qcard-ads" data-slide-to="3"></li>
+                <li data-target="#qcard-ads" data-slide-to="4"></li>
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src="img/login/bills.jpg" class="cs-img">
+                  <div class="carousel-caption">
+                      <h2>Paying Bills on time. Ken.</h2>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="img/login/couple.jpg" class="cs-img">
+                  <div class="carousel-caption">
+                      <h2>Managing life together. Earl &amp; Kenya</h2>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="img/login/laundry.jpg" class="cs-img">
+                  <div class="carousel-caption">
+                      <h2>Yup! Laundry is done. Michelle.</h2>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="img/login/medication.jpg" class="cs-img">
+                  <div class="carousel-caption">
+                      <h2>Remembering to take medication every day. Lisa</h2>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="img/login/pickupkids.jpg" class="cs-img">
+                  <div class="carousel-caption">
+                      <h2>Daddy remembered to pick-up Ashley from school. Ashley</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ons-bottom-toolbar>
+                <ons-button class="btn btn-large" id="login-btn">Log In</ons-button>
+                <ons-button class="btn btn-large" id="signup-btn">Sign Up</ons-button>
+            </ons-bottom-toolbar>
+          </ons-page>
+        </ons-template>
+
+        <ons-template id="signup.html">
+          <ons-page id="signup">
+            <ons-toolbar>
+              <div class="left"><ons-back-button>Back</ons-back-button></div>
+              <div class="center"></div>
+            </ons-toolbar>
+        
+            <div style="text-align: center; margin-top: 30px;">
+              <p>
+                <ons-input modifier="underbar" class="input-lg" placeholder="First Name" float></ons-input>
+              </p>
+              <p>
+                <ons-input modifier="underbar" class="input-lg" placeholder="Last Name" float></ons-input>
+              </p>
+              <p>
+                <ons-input modifier="underbar" class="input-lg" placeholder="Email" float></ons-input>
+              </p>
+              <p>
+                <ons-input modifier="underbar" class="input-lg" type="password" placeholder="Password" float></ons-input>
+              </p>
+              <p>
+                <ons-input modifier="underbar" class="input-lg" type="password" placeholder="Confirm Password" float></ons-input>
+              </p>
+              <p>
+                <ons-button modifier="large">Sign Up</ons-button>
+              </p>
+              <span style="font-size: 13px; text-align: center; font-weight: lighter;">
+                By signing up, you agree to Qcard's<br><b>Terms and Services</b> and <b>Privacy Policy</b>
+              </span >
+            </div>
+          </ons-page>
+        </ons-template>
+ 
+        <ons-template id="login.html">
+          <ons-page id="login">
+            <ons-toolbar>
+              <div class="left"><ons-back-button>Back</ons-back-button></div>
+              <div class="center"></div>
+            </ons-toolbar>
+
+            <div style="text-align: center; margin-top: 30px;">
+              <p>
+                <ons-input modifier="underbar" class="input-lg" placeholder="Email Address" float></ons-input>
+              </p>
+              <p>
+                <ons-input modifier="underbar" class="input-lg" type="password" placeholder="Password" float></ons-input>
+              </p>
+              <p>
+                <ons-button id="signin-btn" modifier="large">Sign in</ons-button>
+              </p>
+              <p>
+                <center><span id="forgot-pw">Forgot your Password?</span></center>
+              </p>
+            </div>
+          </ons-page>
+        </ons-template>
+
+        <ons-template id="forgotpassword.html">
+          <ons-page id="forgotpw">
+            <ons-toolbar>
+              <div class="left"><ons-back-button>Back</ons-back-button></div>
+              <div class="center"></div>
+            </ons-toolbar>
+            <div style="text-align: center; margin-top: 30px;">
+              <p>
+                <ons-input modifier="underbar" class="input-lg" placeholder="Email Address" float></ons-input>
+              </p>
+              <p>
+                <ons-button modifier="large">Reset My Password</ons-button>
+              </p>
+            </div>
+          </ons-page>
+        </ons-template>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/onsenui.js"></script>
+        <script type="text/javascript" src="js/qcard-onsenui.js"></script>
+        <script type="text/javascript" src="js/jQuery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
